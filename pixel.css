@@ -1,0 +1,64 @@
+/* Pixel aesthetic overrides */
+
+.pixel-border {
+  border: 3px solid var(--border) !important;
+  box-shadow:
+    3px 3px 0 rgba(157, 78, 221, 0.2),
+    6px 6px 0 rgba(157, 78, 221, 0.1);
+}
+
+.pixel-border-thin {
+  border: 2px solid var(--border) !important;
+  box-shadow: 2px 2px 0 rgba(157, 78, 221, 0.3);
+}
+
+.pixel-card {
+  position: relative;
+}
+
+.pixel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: linear-gradient(180deg, #e0aaff 0%, #c77dff 100%);
+  border-bottom: 2px solid #9d4edd;
+  z-index: 1;
+}
+
+.pixel-dots {
+  background-image: radial-gradient(circle, #9d4edd 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.pixel-checkerboard {
+  background-image:
+    linear-gradient(45deg, #f8f0ff 25%, transparent 25%),
+    linear-gradient(-45deg, #f8f0ff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f8f0ff 75%),
+    linear-gradient(-45deg, transparent 75%, #f8f0ff 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.pixel-button {
+  border: 2px solid #9d4edd !important;
+  box-shadow:
+    2px 2px 0 #9d4edd,
+    2px 2px 0 0 #9d4edd inset;
+  transition: all 0.1s ease;
+}
+
+.pixel-button:hover {
+  transform: translate(1px, 1px);
+  box-shadow:
+    1px 1px 0 #9d4edd,
+    1px 1px 0 0 #9d4edd inset;
+}
+
+.pixel-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
